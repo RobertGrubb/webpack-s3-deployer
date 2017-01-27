@@ -1,0 +1,47 @@
+{
+  "name": "webpack-s3-deployer",
+  "description": "Deploy your webpack applications to AWS S3 using this simple plugin.",
+  "version": "0.1.1",
+  "main": "./lib",
+  "scripts": {
+    "clean": "rimraf lib",
+    "compile": "./node_modules/.bin/babel --presets es2015,stage-2 -d lib/ src/",
+    "prepublish": "npm run clean && npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertGrubb/webpack-s3-deployer.git"
+  },
+  "keywords": [
+    "webpack",
+    "s3",
+    "aws",
+    "plugin",
+    "deploy"
+  ],
+  "homepage": "https://github.com/RobertGrubb",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "rimraf": "^2.5.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.35",
+    "colors": "^1.1.2",
+    "fs": "0.0.2",
+    "git-rev": "^0.2.1",
+    "glob": "^7.0.0",
+    "lodash": "^4.4.0",
+    "mime": "^1.3.4",
+    "moment": "^2.11.2",
+    "node-slack": "0.0.7",
+    "promptly": "^1.0.0",
+    "replace-in-file": "^1.0.2",
+    "yargs": "^4.1.0"
+  },
+  "files": [
+    "lib/"
+  ]
+}
