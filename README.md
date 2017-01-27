@@ -7,11 +7,11 @@ Webpack Deployer is a plugin for webpack that allows you to deploy your applicat
 
 **How to import Webpack Deployer (pre es6)**
 
-    var WebpackDeployer = require('webpack-deployer');
+    var WebpackDeployer = require('webpack-s3-deployer');
 
 **How to import Webpack Deployer (es6 +)**
 
-    import WebpackDeployer from 'webpack-deployer'
+    import WebpackDeployer from 'webpack-s3-deployer'
 
 **Example deploy script if autoRun is set to false**
 
