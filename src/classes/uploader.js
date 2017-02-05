@@ -702,7 +702,23 @@ class Uploader {
         callback(error);
       }
 
-      callback();
+      /**
+       * For applications that store image paths (like react), we need to
+       * use a replace regex to replace all paths to include the new version
+       * directory.
+       */
+      replace({
+        files: `${this.buildPath}/${this.output.filename}`,
+        replace: /(?=\w)([\w\/]+(?:\.png|\.jpg|\.jpeg|\.gif))|([\.\~\-\w\/]+(?:\.png|\.jpg|\.jpeg‌​|\.gif))"/ig,
+        with: `${this.version}$2"`
+      }, (error) => {
+
+        if (error) {
+          callback(error);
+        }
+
+        callback();
+      });
     });
   }
 
