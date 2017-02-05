@@ -1,7 +1,7 @@
 {
   "name": "webpack-s3-deployer",
   "description": "Deploy your webpack applications to AWS S3 using this simple plugin.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "./lib",
   "scripts": {
     "clean": "rimraf lib",
