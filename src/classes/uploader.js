@@ -709,7 +709,7 @@ class Uploader {
        */
       replace({
         files: `${this.buildPath}/${this.output.filename}`,
-        replace: /(?=\w)([\w\/]+(?:\.png|\.jpg|\.jpeg|\.gif|\.ttf|\.otf|\.eot))|([\.\~\-\w\/]+(?:\.png|\.jpg|\.jpeg‌​|\.gif|\.ttf|\.otf|\.eot))"/ig,
+        replace: /(?=\w)([\w\/]+(?:\.png|\.jpg|\.jpeg|\.gif|\.ttf|\.otf|\.eot|\.mp4))|([\.\~\-\w\/]+(?:\.png|\.jpg|\.jpeg‌​|\.gif|\.ttf|\.otf|\.eot|\.mp4))"/ig,
         with: `${this.version}$2"`
       }, (error) => {
 
