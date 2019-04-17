@@ -120,7 +120,7 @@ class Uploader {
         {'default': 'No deploy message specified.'},
         (error, value) => {
 
-          this.deployMessage = value;
+          this.deployMessage = '[' + this.env + '] ' + value;
           this._createDeployFile();
           this._createRobotsFile();
           this._initializeDeploy(config);
